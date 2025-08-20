@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import CursorFollow from './CursorFollow'
 
 export default function Hero() {
   const [timeLeft, setTimeLeft] = useState({
@@ -32,16 +33,17 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 py-20">
       <div className="max-w-6xl mx-auto text-center">
+        
 
         {/* Main Title - Coming Soon */}
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="mb-16"
+          className="mb-16 z-50 relative bg-transparent"
         >
-          <h1 className="text-8xl md:text-9xl lg:text-[12rem] font-black mb-8 tracking-tight">
-            <span className="bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-300 bg-clip-text text-transparent">
+          <h1 className="text-8xl md:text-9xl lg:text-[12rem] font-black mb-8 tracking-tight ">
+            <span className="bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-300 bg-clip-text text-transparent ">
               COMING SOON
             </span>
           </h1>
@@ -50,11 +52,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-3xl md:text-4xl font-bold text-white mb-4"
+            className="text-3xl md:text-4xl font-bold text-white mb-4 " 
           >
             India’s First AI Filmmaking Institute
           </motion.p>
         </motion.div>
+
+        
 
         {/* Countdown Timer */}
         <motion.div
@@ -91,7 +95,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Floating AI Icons */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
           {/* AI Brain Icon */}
           <motion.div
             animate={{
@@ -122,7 +126,7 @@ export default function Hero() {
               ease: "easeInOut",
               delay: 2
             }}
-            className="absolute top-48 right-20 w-16 h-16 backdrop-blur-2xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/[0.1] rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] flex items-center justify-center text-2xl"
+            className="absolute top-48 right-20 w-16 h-16 backdrop-blur-2xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/[0.1] rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] flex items-center justify-center text-2xl "
           >
             ⚡
           </motion.div>
@@ -140,7 +144,7 @@ export default function Hero() {
               ease: "easeInOut",
               delay: 4
             }}
-            className="absolute bottom-48 left-24 w-18 h-18 backdrop-blur-2xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/[0.1] rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] flex items-center justify-center text-2xl p-4"
+            className="absolute bottom-48 left-24 w-18 h-18 backdrop-blur-2xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/[0.1] rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] flex items-center justify-center text-2xl p-4 "
           >
             🤖
           </motion.div>
@@ -157,11 +161,12 @@ export default function Hero() {
               ease: "easeInOut",
               delay: 1
             }}
-            className="absolute bottom-32 right-16 w-16 h-16 backdrop-blur-2xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/[0.1] rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] flex items-center justify-center text-xl"
+            className="absolute bottom-32 right-16 w-16 h-16 backdrop-blur-2xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/[0.1] rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] flex items-center justify-center text-xl "
           >
             🎁
           </motion.div>
         </div>
+          
       </div>
     </section>
   )
