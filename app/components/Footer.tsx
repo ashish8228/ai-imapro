@@ -13,9 +13,9 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="py-24 px-6 border-t border-white/5 relative overflow-hidden">
+    <footer className="py-24 px-6  border-white/5 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black-950 to-transparent"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
 
