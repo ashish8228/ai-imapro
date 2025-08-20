@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #0a0a0a;
+    color: white;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-xl bg-white/[0.02] border border-white/[0.08] rounded-3xl shadow-2xl;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  }
+  
+  .glass-button {
+    @apply relative backdrop-blur-xl bg-gradient-to-r from-amber-400/20 to-yellow-400/20 border border-amber-400/30 rounded-2xl px-8 py-4 text-amber-400 font-semibold hover:from-amber-400/30 hover:to-yellow-400/30 hover:border-amber-400/50 transition-all duration-500 overflow-hidden;
+  }
+  
+  .glass-button::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-amber-400/10 to-yellow-400/10 opacity-0 transition-opacity duration-500;
+  }
+  
+  .glass-button.group:hover::before {
+    opacity: 1;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-300 bg-clip-text text-transparent;
+  }
+  
+  .modern-card {
+    @apply backdrop-blur-2xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/[0.1] rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.3)];
+  }
+  
+  .floating-orb {
+    @apply absolute rounded-full blur-3xl opacity-20;
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.4) 0%, rgba(251, 191, 36, 0.1) 50%, transparent 100%);
+  }
+}
