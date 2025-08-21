@@ -31,8 +31,8 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[70vh] sm:min-h-screen flex items-center justify-center px-6 py-20">
-      <div className="max-w-6xl mx-auto text-center">
-        
+      <div className="max-w-6xl mx-auto text-center ">
+
 
         {/* Main Title - Coming Soon */}
         <motion.div
@@ -57,7 +57,7 @@ export default function Hero() {
           </motion.p>
         </motion.div>
 
-        
+
 
         {/* Countdown Timer */}
         <motion.div
@@ -165,6 +165,33 @@ export default function Hero() {
             🎁
           </motion.div>
         </div>
+
+
+
+      </div>
+        
+
+      {/* Ai reels */}
+      <div className="lg:block hidden absolute inset-0 pointer-events-none overflow-hidden top-0 z-0">
+
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className=" absolute top-[50px]  left-[15%] h-80 w-48  object-cover rounded-lg opacity-100 "
+          src="/videos/chinees_girl.mp4"
+        />
+
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className=" absolute bottom-[330px]  right-[15%] h-72 w-auto object-cover rounded-lg opacity-100"
+          src="/videos/growing-head.mp4"
+        />
+
       </div>
     </section>
   )
