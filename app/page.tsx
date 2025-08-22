@@ -1,6 +1,7 @@
 'use client'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
+import Ctabutton from './components/Ctabutton'
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       {/* Content */}
       <div className="relative">
         <Hero />
+        <Ctabutton/>
         <Footer />
       </div>
     </main>
