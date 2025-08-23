@@ -1,0 +1,32 @@
+# amplify.yml
+version: 1
+applications:
+  - appRoot: .
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm ci
+        build:
+          commands:
+            # If you use next-sitemap or prisma generate, add here as well
+            - npm run build
+      artifacts:
+        # Amplify Hosting understands Next.js and will bundle SSR automatically
+        baseDirectory: .next
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+          - .next/cache/**/*
+    # (Optional) If you need custom headers for assets or APIs:
+    customHeaders:
+      - pattern: '**/*'
+        headers:
+          - key: Cache-Control
+            value: public,max-age=0,must-revalidate
+      - pattern: '_next/static/*'
+        headers:
+          - key: Cache-Control
+            value: public,max-age=31536000,immutable

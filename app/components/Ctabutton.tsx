@@ -12,7 +12,7 @@ const Ctabutton = () => {
           className="flex justify-center items-center"
         >
       {/* CTA button */}
-      <button className='flex items-center gap-2 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-300  font-semibold text-gray-800 rounded-lg cursor-pointer'><a href="https://t.me/imaproai" className="flex gap-2 items-center text-sm sm:text-md px-8 py-3 ">Join our Telegram community <FaTelegramPlane size={20}/></a></button>
+      <button className='flex items-center sm:p-0 lg:p-2 xl:p-2 gap-2 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-300  font-semibold text-gray-800 rounded-lg cursor-pointer mb-8'><a href="https://t.me/imaproai" className="flex gap-2 items-center text-sm sm:text-md px-8 py-3 ">Join Our Telegram Community<FaTelegramPlane size={20}/></a></button>
     </motion.div>
   )
 }

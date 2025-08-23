@@ -23,7 +23,7 @@ export default function Home() {
       {/* Content */}
       <div className="relative">
         <Hero />
-        <Ctabutton />
+        <Ctabutton/>
         <Footer />
       </div>
     </main>

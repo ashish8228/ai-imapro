@@ -42,7 +42,7 @@ export default function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="mb-16 z-10 relative bg-transparent"
         >
-          <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[12rem] font-black mb-8 tracking-tight">
+          <h1 className="text-4xl sm:text-6xl md:text-6xl lg:text-[10rem] font-black mb-8 tracking-tight">
             <span className="bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-300 bg-clip-text text-transparent">
               COMING SOON
             </span>
@@ -52,12 +52,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-4"
+            className="text-xl sm:text-xl md:text-2xl font-semibold text-white"
           >
-            India’s First AI Design & <br /> <br /> Filmmaking Institute
+            India’s First AI Design & Film Making Institute
           </motion.p>
         </motion.div>
 
+        <Ctabutton />
 
 
         {/* Countdown Timer */}
@@ -65,7 +66,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="backdrop-blur-2xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/[0.1] rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] p-6 sm:p-10 max-w-4xl mx-auto relative overflow-hidden z-10"
+          className="backdrop-blur-2xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/[0.1] rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] p-6 sm:p-10 max-w-4xl mx-auto relative overflow-hidden z-10 mt-8"
         >
           <div className="absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
 
