@@ -1,7 +1,6 @@
 'use client'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
-import Ctabutton from './components/Ctabutton'
 
 export default function Home() {
   return (
