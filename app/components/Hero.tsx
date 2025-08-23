@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import Ctabutton from './Ctabutton'
 
 export default function Hero() {
   const [timeLeft, setTimeLeft] = useState({
@@ -92,6 +93,8 @@ export default function Hero() {
             ))}
           </div>
         </motion.div>
+        
+
 
         {/* Floating AI Icons */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
