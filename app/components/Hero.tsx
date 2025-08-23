@@ -51,9 +51,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4"
+            className="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-4"
           >
-            India’s First AI Filmmaking Institute
+            India’s First AI Design & <br /> <br /> Filmmaking Institute
           </motion.p>
         </motion.div>
 
@@ -168,18 +168,20 @@ export default function Hero() {
 
 
 
+
+
+
       </div>
-        
+
 
       {/* Ai reels */}
       <div className="lg:block hidden absolute inset-0 pointer-events-none overflow-hidden top-0 z-0">
-
         <video
           autoPlay
           loop
           muted
           playsInline
-          className=" absolute top-[50px]  left-[15%] h-80 w-48  object-cover rounded-lg opacity-100 "
+          className=" absolute top-[100px]  left-[10%] h-96 w-[16rem]  object-cover rounded-lg opacity-100 "
           src="/videos/chinees_girl.mp4"
         />
 
@@ -188,11 +190,12 @@ export default function Hero() {
           loop
           muted
           playsInline
-          className=" absolute bottom-[330px]  right-[15%] h-72 w-auto object-cover rounded-lg opacity-100"
+          className=" absolute top-[25rem]  right-[15%] h-[23rem]  w-64 object-cover rounded-lg opacity-100"
           src="/videos/growing-head.mp4"
         />
-
       </div>
+
+
     </section>
   )
 }
