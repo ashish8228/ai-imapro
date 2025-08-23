@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 export default function Footer() {
   const quickLinks = [
@@ -11,6 +12,19 @@ export default function Footer() {
     { name: 'Careers', href: '#careers' },
     { name: 'Contact', href: '#contact' }
   ]
+
+  // Hydration-safe floating dots
+  const [dots, setDots] = useState([])
+  useEffect(() => {
+    setDots(
+      Array.from({ length: 8 }).map(() => ({
+        left: Math.random() * 100,
+        x: Math.random() * 60 - 30,
+        duration: 6 + Math.random() * 4,
+        delay: Math.random() * 3
+      }))
+    )
+  }, [])
 
   return (
     <footer className="py-10 px-6  border-white/5 relative overflow-hidden">
@@ -101,24 +115,24 @@ export default function Footer() {
 
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {[...Array(8)].map((_, i) => (
+          {dots.map((dot, i) => (
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-amber-400/20 rounded-full"
               animate={{
                 y: [0, -120, 0],
-                x: [0, Math.random() * 60 - 30, 0],
+                x: [0, dot.x, 0],
                 opacity: [0, 0.8, 0],
                 scale: [0, 1, 0]
               }}
               transition={{
-                duration: 6 + Math.random() * 4,
+                duration: dot.duration,
                 repeat: Infinity,
-                delay: Math.random() * 3,
+                delay: dot.delay,
                 ease: "easeInOut"
               }}
               style={{
-                left: `${Math.random() * 100}%`,
+                left: `${dot.left}%`,
                 top: '100%'
               }}
             />
