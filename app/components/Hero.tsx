@@ -54,7 +54,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-xl sm:text-xl md:text-2xl font-semibold text-white"
           >
-            India’s First AI Design & Filmmaking Institute
+            India’s First AI Design & Film Making Institute
           </motion.p>
         </motion.div>
 

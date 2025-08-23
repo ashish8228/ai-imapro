@@ -102,13 +102,13 @@ export default function Footer() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-400 text-sm text-center md:text-left">
-              © 2025 India’s First AI Filmmaking Institute. All rights reserved.  
+              © 2025 Join Our Telegram Community. All rights reserved.  
               {/* <a href="#privacy" className="text-amber-400 hover:underline ml-1">Privacy Policy</a> | 
               <a href="#terms" className="text-amber-400 hover:underline ml-1">Terms of Service</a> */}
             </p>
             <div className="flex items-center gap-2 text-slate-500 text-xs">
               <span>Powered by</span>
-              <span className="text-amber-400 font-semibold">Imapro</span>
+              <span className="text-amber-400 font-semibold">Imapro.in</span>
             </div>
           </div>
         </motion.div>
